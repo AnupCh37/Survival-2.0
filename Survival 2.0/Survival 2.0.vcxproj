@@ -151,8 +151,10 @@
     <ClCompile Include="Math.cpp" />
     <ClCompile Include="Menu.cpp" />
     <ClCompile Include="Music.cpp" />
+    <ClCompile Include="PathFinding.cpp" />
     <ClCompile Include="Pause.cpp" />
     <ClCompile Include="Player.cpp" />
+    <ClCompile Include="RecordManager.cpp" />
     <ClCompile Include="Sound.cpp" />
     <ClCompile Include="Survival 2.0.cpp" />
     <ClCompile Include="TileMap.cpp" />
@@ -166,6 +168,7 @@
     <ClInclude Include="Math.h" />
     <ClInclude Include="Menu.h" />
     <ClInclude Include="Music.h" />
+    <ClInclude Include="PathFinding.h" />
     <ClInclude Include="Pause.h" />
     <ClInclude Include="Player.h" />
     <ClInclude Include="Sound.h" />

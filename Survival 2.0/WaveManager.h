@@ -57,15 +57,15 @@ enum class WaveState {
 
 class WaveManager {
 private:
-    // Queue of lightweight spawn requests demonstrating FIFO operations
+   
     std::queue<EnemySpawnRequest> enemySpawnQueue;
 
     int currentWave = 1;
     int nextRequestId = 1;
-    int totalEnemiesSpawned = 0; // enemies actually instantiated in-game
+    int totalEnemiesSpawned = 0; 
 
-    // Timers and intervals (seconds)
-    float spawnInterval = 0.75f; // seconds between spawns
+
+    float spawnInterval = 0.75f;
     float spawnAccumulator = 0.0f;
     float interWaveDelay = 3.0f; // seconds to wait between waves
     DelayTimer interWaveTimer;

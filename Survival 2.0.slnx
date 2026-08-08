@@ -3,5 +3,5 @@
     <Platform Name="x64" />
     <Platform Name="x86" />
   </Configurations>
-  <Project Path="Survival 2.0/Survival 2.0.vcxproj" />
+  <Project Path="Survival 2.0/Survival 2.0.vcxproj" Id="b4fb90ff-adee-4928-a051-4c8c744d30f3" />
 </Solution>

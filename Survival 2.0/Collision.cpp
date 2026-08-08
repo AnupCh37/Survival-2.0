@@ -1,23 +1,21 @@
 #include "Collision.h"
 
-
-int Collision::getTileAtPosition(const sf::Vector2f& position, const std::vector<int>& tiles)
+int Collision::getTileAtPosition(const sf::Vector2f& position, const std::vector<int>& collisionData)
 {
-
     int tileSize = 16;
     int widthInTiles = 50;
     int x = static_cast<int>(position.x) / tileSize;
     int y = static_cast<int>(position.y) / tileSize;
     int index = x + y * widthInTiles;
-    if (index < 0 || index >= static_cast<int>(tiles.size()))
+    if (index < 0 || index >= static_cast<int>(collisionData.size()))
         return -1;
-    return tiles[index];
+    return collisionData[index];
 }
-bool Collision::checkCollision(const sf::FloatRect& bounds, const std::vector<int>& tiles)
+
+bool Collision::checkCollision(const sf::FloatRect& bounds, const std::vector<int>& collisionData)
 {
     int tileSize = 16;
     int mapWidth = 50;
-
 
     int startX = static_cast<int>(bounds.left) / tileSize;
     int endX = static_cast<int>(bounds.left + bounds.width) / tileSize;
@@ -27,8 +25,8 @@ bool Collision::checkCollision(const sf::FloatRect& bounds, const std::vector<in
     for (int y = startY; y <= endY; ++y) {
         for (int x = startX; x <= endX; ++x) {
             int index = x + y * mapWidth;
-            if (index >= 0 && index < static_cast<int>(tiles.size())) {
-                int tileID = tiles[index];
+            if (index >= 0 && index < static_cast<int>(collisionData.size())) {
+                int tileID = collisionData[index];
                 if (collide.contains(tileID)) {
                     return true;
                 }

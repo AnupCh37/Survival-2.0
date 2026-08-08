@@ -2,7 +2,9 @@
 #include <SFML/Graphics.hpp>
 #include <iostream>
 #include <cmath>
+#include <vector>
 #include "Collision.h"
+#include "Pathfinding.h"
 #include "Sound.h"
 
 class Player;
@@ -43,6 +45,20 @@ private:
     float frameTime;
     int totalFrames;
     bool wasMoving;
+
+    Pathfinding pathfinding;
+    std::vector<sf::Vector2i> currentPath;
+    std::size_t currentPathIndex;
+    float pathUpdateAccumulator;
+    float pathUpdateInterval;
+    bool hasValidPath;
+    sf::Vector2i lastPlayerTile;
+    float stuckAccumulator;
+    sf::Vector2f previousPosition;
+
+    bool moveTowardCurrentWaypoint(float deltaTimeMilliseconds, const std::vector<int>& collisionTiles);
+    void invalidatePath();
+    sf::Vector2f getCollisionSize() const;
 
     sf::RectangleShape healthBarBackground;
     sf::RectangleShape healthBarForeground;
