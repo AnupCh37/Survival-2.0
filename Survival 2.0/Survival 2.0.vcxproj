@@ -154,7 +154,6 @@
     <ClCompile Include="PathFinding.cpp" />
     <ClCompile Include="Pause.cpp" />
     <ClCompile Include="Player.cpp" />
-    <ClCompile Include="RecordManager.cpp" />
     <ClCompile Include="Sound.cpp" />
     <ClCompile Include="Survival 2.0.cpp" />
     <ClCompile Include="TileMap.cpp" />
