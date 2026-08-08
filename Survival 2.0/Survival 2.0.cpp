@@ -110,8 +110,8 @@ int main()
 
     constexpr int tilew = 16;
     constexpr int tileh = 16;
-    constexpr int mapw = 100;
-    constexpr int maph = 75;
+    constexpr int mapw = 50;
+    constexpr int maph = 38;
 
     constexpr float cameraWidth = 640.0f;
     constexpr float cameraHeight = 480.0f;
